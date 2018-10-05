@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0.2//EN" "http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+<validators>
+
+<field name="mobileNo">
+<field-validator type="requiredstring" short-circuit="true">
+ <message>enter valid mobileno</message>
+</field-validator>
+<field-validator type="regex" short-circuit="true">
+  <param name="expression"><![CDATA[\d{10}]]></param>
+ <message>phone no must be 10 digits</message>
+</field-validator>
+</field>
+
+<field name="firstName">
+<field-validator type="requiredstring" short-circuit="true">
+<message>first name required</message>
+</field-validator>
+<field-validator type="stringlength" short-circuit="true">
+<param name="minLength">2</param>
+<message>The minimum length is 2 characters</message>
+</field-validator>
+</field>
+
+<field name="lastName">
+<field-validator type="requiredstring">
+<message>last name required</message>
+</field-validator>
+</field>
+
+
+
+<field name="street">
+<field-validator type="requiredstring">
+<message>street name required</message>
+</field-validator>
+</field>
+
+<field name="location">
+<field-validator type="requiredstring">
+<message>location name required</message>
+</field-validator>
+</field>
+
+<field name="dateOfBirth">
+<field-validator type="required">
+<message>Date of Birth  required</message>
+</field-validator>
+</field>
+
+<field name="city">
+<field-validator type="requiredstring">
+<message>city name required</message>
+</field-validator>
+</field>
+
+<field name="state">
+<field-validator type="requiredstring">
+<message>state name required</message>
+</field-validator>
+</field>
+
+<field name="pincode">
+<field-validator type="requiredstring" short-circuit="true">
+<message>enter valid pincode</message>
+</field-validator>
+<field-validator type="regex" short-circuit="true">
+  <param name="expression"><![CDATA[\d{6}]]></param>
+  <message>pincode no must be 6 digits</message>
+</field-validator>
+</field>
+
+
+<field name="emailId">
+<field-validator type="email">
+<message>EmailId required</message>
+</field-validator>
+</field>
+
+<field name="password">
+<field-validator type="requiredstring">
+<message>password required</message>
+</field-validator>
+</field>
+
+
+</validators>
